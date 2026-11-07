@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ticket_temporel" />
+
+    <RelativeLayout
+        android:id="@+id/layout_infos_cj "
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7">
+
+        <TextView
+            android:id="@+id/txt_titre_cj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" PASSEPORT TEMPOREL"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_nom_cj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_titre_cj"
+            android:text="Nom du voyageur : Mohamed"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_age_cj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_nom_cj"
+            android:layout_marginTop="20dp"
+            android:text=" Âge temporel : 45 ans"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_motif_cj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_age_cj"
+            android:layout_marginTop="20dp"
+            android:text=" Motif : Tourisme"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_approuver_cj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_motif_cj"
+            android:layout_marginTop="30dp"
+            android:text="Approuver le saut temporel" />
+
+        <Button
+            android:id="@+id/btn_refuser_cj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_approuver_cj"
+            android:layout_marginTop="15dp"
+            android:text="Refuser (Risque de paradoxe)" />
+    </RelativeLayout>
+</LinearLayout>
