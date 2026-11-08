@@ -1,4 +1,3 @@
-
 package com.example.douanetemporelle;
 
 import android.content.Intent;
@@ -10,14 +9,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class VerificationActivity extends AppCompatActivity {
 
-    // 1. Matricule bech ta3mel génération lel les clés
+    // 1. Matricule bech na3mlou génération lel clés
     private static final String MATRICULE = "0307";
 
-    // 2. déclaration des éléments XML
+    // 2. Déclaration des éléments XML
     private TextView txtNom, txtAge, txtMotif;
     private Button btnApprouver, btnRefuser;
 
-    // 3. Nom du voyageur pour le transmettre à ResultActivity
+    // 3. Nom du voyageur
     private String nomVoyageur;
 
     @Override
@@ -25,7 +24,7 @@ public class VerificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verification);
 
-        // 4. liaison entre Java et XML
+        // 4. Liaison entre Java et XML
         txtNom = findViewById(R.id.txt_nom_cj);
         txtAge = findViewById(R.id.txt_age_cj);
         txtMotif = findViewById(R.id.txt_motif_cj);
@@ -33,7 +32,7 @@ public class VerificationActivity extends AppCompatActivity {
         btnApprouver = findViewById(R.id.btn_approuver_cj);
         btnRefuser = findViewById(R.id.btn_refuser_cj);
 
-        // 5. hedhi ta3mel récupération lel les données eli b3atehom  MainActivity
+        // 5. Récupération des données mel MainActivity
         nomVoyageur = getIntent().getStringExtra(
                 MainActivity.genererCle(MATRICULE, "NOM_VOYAGEUR"));
 
@@ -46,21 +45,21 @@ public class VerificationActivity extends AppCompatActivity {
         String motif = getIntent().getStringExtra(
                 MainActivity.genererCle(MATRICULE, "MOTIF_VOYAGE"));
 
-        // 6. te7seb l'âge temporel
+        // 6. Calcul de l'âge temporel
         int ageTemporel = anneeDestination - anneeNaissance;
 
-        // 7. ta3mel affichage informations du voyageur
+        // 7. Affichage des informations
         txtNom.setText("Nom du voyageur : " + nomVoyageur);
         txtAge.setText("Âge temporel : " + ageTemporel + " ans");
         txtMotif.setText("Motif : " + motif);
 
-        // 8. hedhi ta3mel vérification lil condition  paradoxe
+        // 8. Vérification du risque de paradoxe
         int difference = Math.abs(anneeDestination - anneeNaissance);
 
         if ("Modification du passé".equals(motif)
                 && estPremier(difference)) {
 
-            // 9. ta3mel désactivation du bouton Approuver
+            // 9. Désactivation du bouton Approuver
             btnApprouver.setEnabled(false);
         }
 
@@ -75,7 +74,7 @@ public class VerificationActivity extends AppCompatActivity {
         });
     }
 
-    // 12.  hedhi fonction t3awena bech na3rfo  nombre  premier wala le
+    // 12. Fonction bech na3rfou ken nombre premier
     private boolean estPremier(int nombre) {
 
         if (nombre < 2) {
@@ -91,7 +90,7 @@ public class VerificationActivity extends AppCompatActivity {
         return true;
     }
 
-    // 13. hedhi bech t7el activité ResultActivity
+    // 13. Fonction bech n7ellou ResultActivity
     private void ouvrirResultat(boolean verdict) {
 
         Intent intent = new Intent(
@@ -110,9 +109,7 @@ public class VerificationActivity extends AppCompatActivity {
                 nomVoyageur
         );
 
+        // 15. Ouverture de ResultActivity
         startActivity(intent);
-
-        // 15. hedhi bech tsaker VerificationActivity
-        finish();
     }
 }
