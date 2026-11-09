@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- el racine: LinearLayout OFOUKI (horizontal) kima ytalab el enonce -->
+<!-- yousef el image 3al isar w el textes 3al imin -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
+    <!-- el image mta3 el billet/passeport: 3al isar -->
+    <!-- layout_width=0dp m3a layout_weight=0.3 => te5ou 30% mel 3ardh -->
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="0dp"
@@ -13,12 +17,15 @@
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/ticket_temporel" />
 
+    <!-- RelativeLayout 3al imin: fih el textes w el boutons -->
+    <!-- layout_weight=0.7 => te5ou 70% mel 3ardh -->
     <RelativeLayout
         android:id="@+id/layout_infos_cj"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="0.7">
 
+        <!-- titre mta3 el passeport: fil west fo9 -->
         <TextView
             android:id="@+id/txt_titre_cj"
             android:layout_width="wrap_content"
@@ -28,6 +35,8 @@
             android:textSize="22sp"
             android:textStyle="bold" />
 
+        <!-- esm el voyageur: yetzed te7t el titre -->
+        <!-- el texte hedha mo9ata2 (placeholder), fil code Java bech yetbaddel bil esm elli jey mel Intent -->
         <TextView
             android:id="@+id/txt_nom_cj"
             android:layout_width="wrap_content"
@@ -36,6 +45,8 @@
             android:text="Nom du voyageur : Mohamed"
             android:textSize="18sp" />
 
+        <!-- el age temporel (3am el destination - 3am el wileda): te7t el esm b marge 20dp -->
+        <!-- placeholder: yetbaddel fil code b el 9ima elli n7asbouha -->
         <TextView
             android:id="@+id/txt_age_cj"
             android:layout_width="wrap_content"
@@ -45,6 +56,8 @@
             android:text=" Âge temporel : 45 ans"
             android:textSize="18sp" />
 
+        <!-- sbeb el safra (motif): te7t el age -->
+        <!-- placeholder: yetbaddel bil motif elli e5tarou el voyageur -->
         <TextView
             android:id="@+id/txt_motif_cj"
             android:layout_width="wrap_content"
@@ -54,6 +67,8 @@
             android:text=" Motif : Tourisme"
             android:textSize="18sp" />
 
+        <!-- bouton "Approuver": yab3eth verdict = true w esm el voyageur lel activite 3 -->
+        <!-- yetna7a (disabled) fil code ken el motif "Modification du passe" w el far9 3adad awwali -->
         <Button
             android:id="@+id/btn_approuver_cj"
             android:layout_width="wrap_content"
@@ -62,6 +77,7 @@
             android:layout_marginTop="30dp"
             android:text="Approuver le saut temporel" />
 
+        <!-- bouton "Refuser": yab3eth verdict = false w esm el voyageur lel activite 3 -->
         <Button
             android:id="@+id/btn_refuser_cj"
             android:layout_width="wrap_content"

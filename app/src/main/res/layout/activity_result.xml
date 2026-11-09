@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- el racine: ConstraintLayout, 3andha ID (layout_result_ag) bech fil code nbaddlou el background (akhdhar / a7mar) -->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,6 +8,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- titre fo9: "Resultat du voyage temporel" -->
+    <!-- mkayyas fo9 (marginTop 80dp) w fil west (Start w End m7attin 3al parent) -->
     <TextView
         android:id="@+id/txt_resultat_ag"
         android:layout_width="wrap_content"
@@ -22,6 +25,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- el message personnalise: yetzed te7t el titre -->
+    <!-- fil code bech yetbaddel b "Bon voyage [Nom]" wala "[Nom] est en etat d'arrestation temporelle" -->
     <TextView
         android:id="@+id/txt_message_ag"
         android:layout_width="wrap_content"
@@ -37,6 +42,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_resultat_ag" />
 
+    <!-- bouton "Nouveau voyageur": yarja3 lel MainActivity w yosker el activites el 9dom (b flags fil Intent) -->
     <Button
         android:id="@+id/btn_nouveau_ag"
         android:layout_width="wrap_content"

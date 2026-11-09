@@ -1,14 +1,29 @@
+<!-- ملف strings.xml: fih el textes elli yesta3mlouhom el layouts (ahsen men el 9ou3 fil XML) -->
 <resources>
+    <!-- esm el application elli yodhher fil telephone -->
     <string name="app_name">Douanetemporelle</string>
+
+    <!-- titre mta3 el activite 1 -->
     <string name="titre_application">DOUANE TEMPORELLE</string>
+
+    <!-- label w hint mta3 champ el esm -->
     <string name="label_nom">Nom du voyageur</string>
     <string name="hint_nom">Entrez votre nom</string>
+
+    <!-- texte mta3 el bouton elli yemchi lel activite 2 -->
     <string name="btn_inspecter">Inspecter le profil</string>
+
+    <!-- hints mta3 el 3am el destination w el 3am el wileda (kif kif lezem ykounou b nafs el format) -->
     <string name="edt_destination_ag">Exemple : 2050</string>
     <string name="edt_naissance_ag">exemple:2005</string>
+
+    <!-- labels mta3 el champs: destination, motif, naissance -->
     <string name="label_destination">Année de destination</string>
     <string name="label_motif">Motif du voyage</string>
     <string name="label_naissance">Année de naissance</string>
+
+    <!-- el liste mta3 el Spinner: les sbeb el 3adda mta3 el safra -->
+    <!-- el ordre hedha howa elli yodhher fil liste -->
     <string-array name="motifs_voyage">
         <item>Tourisme</item>
         <item>Modification du passé</item>
